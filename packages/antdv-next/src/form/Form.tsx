@@ -538,7 +538,8 @@ const InternalForm = defineComponent<
 
     const setFields = (data: FieldData[]) => {
       data.forEach((item) => {
-        const target = Object.values(fields.value).find(field => containsNamePath([field.namePath()], item.name as InternalNamePath))
+        const namePath = getNamePath(item.name as NamePath)
+        const target = Object.values(fields.value).find(field => containsNamePath([field.namePath()], namePath))
         if (target?.setFieldState) {
           target.setFieldState({
             errors: item.errors || [],
@@ -548,7 +549,7 @@ const InternalForm = defineComponent<
           })
         }
         if (Object.prototype.hasOwnProperty.call(item, 'value')) {
-          updateModelValue(item.name as InternalNamePath, item.value)
+          updateModelValue(namePath, item.value)
         }
       })
       triggerFieldsChange()

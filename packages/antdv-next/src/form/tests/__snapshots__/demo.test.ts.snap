@@ -22,7 +22,7 @@ exports[`form demo > renders _semantic correctly 1`] = `
         style="max-width: 600px;"
       >
         <div
-          class="ant-form-item css-var-v-0 ant-form-css-var ant-form-item-horizontal"
+          class="ant-form-item css-var-v-0 ant-form-css-var ant-form-item-with-help ant-form-item-horizontal"
         >
           <div
             class="ant-row css-var-v-0 ant-form-item-row"
@@ -70,7 +70,29 @@ exports[`form demo > renders _semantic correctly 1`] = `
                   name="ant-form-show-help"
                   persisted="false"
                 >
-                  <!---->
+                  <div
+                    class="ant-form-item-explain css-var-v-0 ant-form-css-var ant-form-item-explain-connected semantic-mark-help"
+                  >
+                    <transition-group-stub
+                      appear="true"
+                      css="true"
+                      enteractiveclass="ant-form-show-help-item ant-form-show-help-item-enter ant-form-show-help-item-appear ant-form-show-help-item-appear-prepare ant-form-show-help-item-enter-prepare"
+                      enterfromclass="ant-form-show-help-item ant-form-show-help-item-enter ant-form-show-help-item-appear ant-form-show-help-item-appear-prepare ant-form-show-help-item-appear-start ant-form-show-help-item-enter-prepare ant-form-show-help-item-enter-start"
+                      entertoclass="ant-form-show-help-item ant-form-show-help-item-enter ant-form-show-help-item-appear ant-form-show-help-item-appear-active ant-form-show-help-item-enter-active"
+                      leaveactiveclass="ant-form-show-help-item ant-form-show-help-item-leave ant-form-show-help-item-leave-active"
+                      leavefromclass="ant-form-show-help-item ant-form-show-help-item-leave"
+                      leavetoclass="ant-form-show-help-item ant-form-show-help-item-leave ant-form-show-help-item-leave-active"
+                      moveclass="ant-form-show-help-item ant-form-show-help-item-move"
+                      name="ant-form-show-help-item"
+                      persisted="false"
+                    >
+                      <div
+                        class="semantic-mark-helpItem"
+                      >
+                        Use 4 to 16 characters.
+                      </div>
+                    </transition-group-stub>
+                  </div>
                 </transition-stub>
                 <!---->
               </div>
@@ -169,7 +191,7 @@ exports[`form demo > renders _semantic correctly 1`] = `
                   class="ant-form-item-extra semantic-mark-extra"
                   id="basic_password_extra"
                 >
-                  Use at least 8 characters.
+                  Password must contain letters and numbers.
                 </div>
               </div>
             </div>
@@ -697,7 +719,7 @@ exports[`form demo > renders _semantic correctly 1`] = `
               style="margin: 0px; font-size: 12px;"
             >
               <!---->
-              Help wrapper element that contains validation feedback and help-text list
+              Help container element with spacing, motion, and presentation styles for help and validation areas
               <!---->
               <!---->
               <!---->
@@ -827,7 +849,7 @@ exports[`form demo > renders _semantic correctly 1`] = `
               style="margin: 0px; font-size: 12px;"
             >
               <!---->
-              Single help/validation entry styles
+              Single help message item with typography styles for prompt, error, and warning text
               <!---->
               <!---->
               <!---->
@@ -957,7 +979,7 @@ exports[`form demo > renders _semantic correctly 1`] = `
               style="margin: 0px; font-size: 12px;"
             >
               <!---->
-              Extra-text element below the field with spacing and color styles
+              Extra prompt container element with spacing, color, and typography styles for supplementary text
               <!---->
               <!---->
               <!---->
